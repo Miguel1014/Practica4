@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica4.Page2">
+    <Grid BackgroundColor="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center">Carrera</Label>
+        <Label Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">Semestre</Label>
+        <Label Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center">Matricula</Label>
+
+        <Picker x:Name="picker" Title="Selecciona tu carrera" Grid.Column="1" Grid.Row="1" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Ing. Sistemas Computacionales</x:String>
+                    <x:String>Lic. Administración</x:String>
+                    <x:String>Lic. Biologia</x:String>
+                    <x:String>Ing. Civil</x:String>
+                    <x:String>Ing. Industrial</x:String>
+                    <x:String>Ing. Mecatronica</x:String>
+                    <x:String>Gastronomia</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker x:Name="picker1" Title="Selecciona tu semestre" Grid.Column="1" Grid.Row="2" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+                    <x:String>7</x:String>
+                    <x:String>8</x:String>
+                    <x:String>9</x:String>
+                    <x:String>10</x:String>
+                    <x:String>11</x:String>
+                    <x:String>12</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Entry x:Name="VMatricula" Keyboard="Numeric" Placeholder="XXXXXXXXXXX" Grid.Column="1" Grid.Row="3" VerticalOptions="Center"></Entry>
+
+        <Button Grid.Column="1" Grid.Row="5" Text="Siguiente" Clicked="Button_Clicked"></Button>
+
+
+
+
+        <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" 
+         VerticalOptions="Center" Text="DATOS ESCOLARES"
+         Rotation="-15"
+         IsVisible="true"
+         FontSize="Large"
+         FontAttributes="Bold"
+         TextColor="Aqua" />
+
+
+
+    </Grid>
+
+</ContentPage>
